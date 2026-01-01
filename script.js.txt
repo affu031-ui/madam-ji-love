@@ -1,0 +1,33 @@
+let slides = [
+  {
+    title: "🎉 Happy New Year Madam Ji 🎉",
+    text: "You make my life brighter every day ✨",
+    emoji: "💖"
+  },
+  {
+    title: "❤️ I Love You ❤️",
+    text: "From the bottom of my heart, I truly love you Madam Ji 🥰",
+    emoji: "😍"
+  },
+  {
+    title: "👰🤵 My Dream",
+    text: "I want to marry you and spend my whole life with you 💍",
+    emoji: "💑"
+  },
+  {
+    title: "🌸 Always Yours 🌸",
+    text: "No matter what, I’ll always care for you ❤️",
+    emoji: "🌹"
+  }
+];
+
+let index = 0;
+
+function nextSlide() {
+  index = (index + 1) % slides.length;
+  document.getElementById("content").innerHTML = `
+    <h1>${slides[index].title}</h1>
+    <p>${slides[index].text}</p>
+    <div style="font-size:40px">${slides[index].emoji}</div>
+  `;
+}
